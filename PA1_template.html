@@ -432,13 +432,12 @@ The dataset is stored in a comma-separated-value (CSV) file and there are a tota
 </div>
 <div id="loading-and-preprocessing-the-data" class="section level2">
 <h2>Loading and preprocessing the data</h2>
-<ol style="list-style-type: decimal">
-<li>Unzip the data to obtain a csv file.</li>
-</ol>
+<div id="unzip-the-data-to-obtain-a-csv-file." class="section level3">
+<h3>1. Unzip the data to obtain a csv file.</h3>
 <pre class="r"><code>unzip(&quot;activity.zip&quot;, exdir = &quot;data&quot;)</code></pre>
-<ol start="2" style="list-style-type: decimal">
-<li>Read the data into activity data frame and show summary statistics</li>
-</ol>
+</div>
+<div id="read-the-data-into-activity-data-frame-and-show-summary-statistics" class="section level3">
+<h3>2. Read the data into activity data frame and show summary statistics</h3>
 <pre class="r"><code>activity &lt;- read.csv(&quot;data/activity.csv&quot;, stringsAsFactors = FALSE)
 str(activity)</code></pre>
 <pre><code>## &#39;data.frame&#39;:    17568 obs. of  3 variables:
@@ -454,9 +453,9 @@ str(activity)</code></pre>
 ##  3rd Qu.: 12.00                      3rd Qu.:1766.2  
 ##  Max.   :806.00                      Max.   :2355.0  
 ##  NA&#39;s   :2304</code></pre>
-<ol start="3" style="list-style-type: decimal">
-<li>Convert date to POSIXct class using lubridate package and convert interval to hour:minute format</li>
-</ol>
+</div>
+<div id="convert-date-to-posixct-class-using-lubridate-package-and-convert-interval-to-hourminute-format" class="section level3">
+<h3>3. Convert date to POSIXct class using lubridate package and convert interval to hour:minute format</h3>
 <pre class="r"><code>library(lubridate)
 activity$date &lt;- ymd(activity$date)
 str(activity)</code></pre>
@@ -464,6 +463,7 @@ str(activity)</code></pre>
 ##  $ steps   : int  NA NA NA NA NA NA NA NA NA NA ...
 ##  $ date    : Date, format: &quot;2012-10-01&quot; &quot;2012-10-01&quot; ...
 ##  $ interval: int  0 5 10 15 20 25 30 35 40 45 ...</code></pre>
+</div>
 </div>
 <div id="what-is-mean-total-number-of-steps-taken-per-day" class="section level2">
 <h2>What is mean total number of steps taken per day?</h2>

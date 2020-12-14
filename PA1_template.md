@@ -19,15 +19,15 @@ The variables included in this dataset are:
 * **steps**: Number of steps taking in a 5-minute interval (missing values are coded as \color{red}{\verb|NA|}NA)  
 * **date**: The date on which the measurement was taken in YYYY-MM-DD format  
 * **interval**: Identifier for the 5-minute interval in which measurement was taken  
-The dataset is stored in a comma-separated-value (CSV) file and there are a total of 17,568 observations in this dataset.
+The dataset is stored in a comma-separated-value (CSV) file and there are a total of 17,568 observations in this dataset.  
 
 ## Loading and preprocessing the data
-1. Unzip the data to obtain a csv file.
+### 1. Unzip the data to obtain a csv file.
 
 ```r
 unzip("activity.zip", exdir = "data")
 ```
-2. Read the data into activity data frame and show summary statistics
+### 2. Read the data into activity data frame and show summary statistics
 
 ```r
 activity <- read.csv("data/activity.csv", stringsAsFactors = FALSE)
@@ -55,7 +55,7 @@ summary(activity)
 ##  Max.   :806.00                      Max.   :2355.0  
 ##  NA's   :2304
 ```
-3. Convert date to POSIXct class using lubridate package and convert interval to hour:minute format
+### 3. Convert date to POSIXct class using lubridate package and convert interval to hour:minute format
 
 ```r
 library(lubridate)
